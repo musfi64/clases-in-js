@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="clases"></p>
+    <script>
+        class car{
+            constructor(braned){
+                this.carname=braned;
+            }
+            present(){
+                return "i have a " + this.carname;
+            }
+        }
+        class model extends car{
+            constructor(braned,mod){
+                super(braned)
+                this.model=mod;
+            }
+            show(){
+                return this.present() + ", it is a " + this.model;
+            }
+        }
+        let mycar=new model("ford","mustang");
+        document.getElementById("clases").innerHTML=mycar.show();
+    </script>
+</body>
+</html>
